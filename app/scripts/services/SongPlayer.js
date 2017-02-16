@@ -31,20 +31,21 @@
 		
 		};
 		
+		/**
+		* @function playSong
+		* @desc plays the currentBuzzObject and pauses the currentBuzzObject
+		*/
+		
 		var playSong = function(song) {
-			if (currentBuzzObject) {
 				currentBuzzObject.play();
-			}
-			
-			
-		}
+				song.playing = true;
+			};
 		
 		SongPlayer.play = function(song) {
 			if (currentSong !== song) {
 
 				setSong(song);
-				currentBuzzObject.play();
-				song.playing = true;
+				playSong(song);
 				
 			} else if (currentSong === song) {
 				if (currentBuzzObject.isPaused()) {
