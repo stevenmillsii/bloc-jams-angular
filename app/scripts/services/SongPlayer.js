@@ -31,6 +31,14 @@
 		
 		};
 		
+		var playSong = function(song) {
+			if (currentBuzzObject) {
+				currentBuzzObject.play();
+			}
+			
+			
+		}
+		
 		SongPlayer.play = function(song) {
 			if (currentSong !== song) {
 
